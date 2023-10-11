@@ -7,4 +7,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+a::selection {
+    background: rgb(46, 1, 65);
+    color: rgb(237, 237, 237);
+}
+
+span::selection {
+    background: rgb(38, 4, 53);
+    color: rgb(237, 237, 237);
 }
