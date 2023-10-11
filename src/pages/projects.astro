@@ -6,7 +6,7 @@ import '../styles/global.css'
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600&display=swap" rel="stylesheet" />
 
 <div class="container">
-    <main class="main">
+    <main id="expanded-block" class="block main">
         <span class="title">adil satiev</span>
         <span class="title projects_title">my projects</span>
         <div class="parent">
@@ -21,17 +21,41 @@ import '../styles/global.css'
             <div class="project div9">9</div>
         </div>
         <a class="back" href="/">go back</a>
-
     </main>
 </div>
 
+<script>
+    window.onload = function () {
+        const block = document.getElementById('expanded-block')
+        block.classList.add('expanded')
+    }
+</script>
+
 <style>
+    .block {
+        transition: width 3.5s ease;
+    }
+    .expanded {
+        animation-name: expand;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes expand {
+        from {
+            width: 700px;
+        }
+        to {
+            width: 950px;
+        }
+    }
+
     .main {
         display: flex;
         align-items: center;
         flex-direction: column;
         background: rgb(237, 237, 237);
-        width: 950px;
         height: 550px;
         border-radius: 1rem;
         box-shadow: 0px 0px 46px 22px rgba(216, 230, 241, 0.2);
@@ -75,7 +99,6 @@ import '../styles/global.css'
         grid-template-rows: repeat(3, 1fr) repeat(2, 0);
         grid-column-gap: 10px;
         grid-row-gap: 10px;
-        
     }
 
     .div1 {
