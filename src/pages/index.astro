@@ -1,136 +1,117 @@
 ---
-
-
-
+import '../styles/global.css'
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link
-		href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
-		rel="stylesheet"
-	/>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600&display=swap"
-		rel="stylesheet"
-	/>
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Adil Satiev</title>
-	</head>
-	<body>
-		<div class="container">
-			<main class="main">
-				<span class="title">adil satiev</span>
-				<a class="mail" href="mailto:adil@satiev.ru">mail me</a>
-				<a class="projects" href="/projects"> my projects</a>
-				<a class="telegram" href="http://t.me/theabsolutemadman"
-					>telegram</a
-				>
-				<a class="inst" href="http://instagram/65i116">inst</a>
-				<div class="cv_wrapper">
-					<a class="cv" href="#">cv</a>
-					<div class="arrow-left">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-				</div>
-			</main>
-		</div>
-	</body>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600&display=swap" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>i'm here</title>
+    </head>
+    <body>
+        <div class="container">
+            <main class="main">
+                <span class="title">adil satiev</span>
+                <a class="mail" href="mailto:adil@satiev.ru">mail me</a>
+                <a class="projects" href="/projects"> my projects</a>
+                <a class="telegram" href="http://t.me/theabsolutemadman">telegram</a>
+                <a class="inst" href="http://instagram/65i116">inst</a>
+                <div class="cv_wrapper">
+                    <a class="cv" href="#">cv</a>
+                    <div class="arrow">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
 </html>
 
-
 <style>
-body {
-    height: 100vh;
-    background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: rgb(237, 237, 237);
-    width: 350px;
-    height: 550px;
-    border-radius: 1rem;
-    font-size: 3.5rem;
-    box-shadow: 0px 0px 46px 22px rgba(216, 230, 241, 0.2);
-    margin: 1rem;
-}
-.title {
-    font-size: 1.5rem;
-    font-family: "Urbanist";
-    font-weight: 600;
-}
-.cv_wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.arrow-left {
-    position: absolute;
-    display: flex;
-    left: 70px;
-    bottom: 32px;
-}
-.arrow-left span {
-    display: block;
-    width: 10px;
-    height: 10px;
-    border-bottom: 3px solid #000000;
-    border-left: 3px solid #000000;
-    margin: -1.5px;
-    animation: arrow-left 2s infinite;
-}
-
-.arrow-left span:nth-child(2) {
-    animation-delay: -0.1s;
-}
-.arrow-left span:nth-child(3) {
-    animation-delay: -0.2s;
-}
-@keyframes arrow-left {
-    0% {
-        opacity: 0;
-        transform: rotate(45deg) translate(-0px, -0px);
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: rgb(237, 237, 237);
+        width: 350px;
+        height: 550px;
+        border-radius: 1rem;
+        font-size: 3.5rem;
+        box-shadow: 0px 0px 46px 22px rgba(216, 230, 241, 0.2);
+        margin: 1rem;
     }
-    50% {
-        opacity: 1;
+    .title {
+        font-size: 1.5rem;
+        font-family: 'Urbanist';
+        font-weight: 600;
     }
-    100% {
-        opacity: 0;
-        transform: rotate(45deg) translate(0px, 0px);
+    .cv_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
     }
-}
 
-a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    margin: 10px 0;
-}
-a {
-    box-sizing: border-box;
-    font-family: "Abril Fatface", cursive;
-}
+    .arrow {
+        position: absolute;
+        display: flex;
+        left: 70px;
+        bottom: 32px;
+    }
+    .arrow span {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-bottom: 3px solid #000000;
+        border-left: 3px solid #000000;
+        margin: -1.5px;
+        animation: arrow-left 2s infinite;
+    }
 
-a::selection {
-    background: rgb(46, 1, 65);
-    color: rgb(237, 237, 237);
-}
+    .arrow span:nth-child(2) {
+        animation-delay: -0.1s;
+    }
+    .arrow span:nth-child(3) {
+        animation-delay: -0.2s;
+    }
+    @keyframes arrow-left {
+        0% {
+            opacity: 0;
+            transform: rotate(45deg) translate(-0px, -0px);
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: rotate(45deg) translate(0px, 0px);
+        }
+    }
 
-span::selection {
-    background: rgb(38, 4, 53);
-    color: rgb(237, 237, 237);
-}
+    a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        margin: 10px 0;
+    }
+    a {
+        box-sizing: border-box;
+        font-family: 'Abril Fatface', cursive;
+    }
 
+    a::selection {
+        background: rgb(46, 1, 65);
+        color: rgb(237, 237, 237);
+    }
+
+    span::selection {
+        background: rgb(38, 4, 53);
+        color: rgb(237, 237, 237);
+    }
 </style>

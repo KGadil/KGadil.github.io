@@ -1,1 +1,116 @@
-<h1>projects</h1>
+---
+import '../styles/global.css'
+---
+
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<div class="container">
+    <main class="main">
+        <span class="title">adil satiev</span>
+        <span class="title projects_title">my projects</span>
+        <div class="parent">
+            <div class="project div1">1</div>
+            <div class="project div2">2</div>
+            <div class="project div3">3</div>
+            <div class="project div4">4</div>
+            <div class="project div5">5</div>
+            <div class="project div6">6</div>
+            <div class="project div7">7</div>
+            <div class="project div8">8</div>
+            <div class="project div9">9</div>
+        </div>
+        <a class="back" href="/">go back</a>
+
+    </main>
+</div>
+
+<style>
+    .main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background: rgb(237, 237, 237);
+        width: 950px;
+        height: 550px;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 46px 22px rgba(216, 230, 241, 0.2);
+        margin: 1rem;
+        padding-top: 1.4rem;
+    }
+    .title {
+        font-size: 1.5rem;
+        font-family: 'Urbanist';
+        font-weight: 600;
+    }
+    .projects_title {
+        margin-top: 3px;
+        margin-bottom: 20px;
+        font-size: 2rem;
+        font-family: 'Abril Fatface', cursive;
+    }
+    a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        margin: 10px 0;
+    }
+    a {
+        box-sizing: border-box;
+        font-family: 'Abril Fatface', cursive;
+    }
+
+    a::selection {
+        background: rgb(46, 1, 65);
+        color: rgb(237, 237, 237);
+    }
+
+    span::selection {
+        background: rgb(38, 4, 53);
+        color: rgb(237, 237, 237);
+    }
+
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) repeat(2, 0);
+        grid-template-rows: repeat(3, 1fr) repeat(2, 0);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        
+    }
+
+    .div1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .div2 {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    .div3 {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+    .div4 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .div5 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    .div6 {
+        grid-area: 2 / 3 / 3 / 4;
+    }
+    .div7 {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    .div8 {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    .div9 {
+        grid-area: 3 / 3 / 4 / 4;
+    }
+    .project {
+        background: white;
+        padding: 1rem 5rem;
+        border-radius: 10px;
+        font-family: 'Urbanist';
+        font-weight: 600;
+        font-size: 4rem;
+    }
+</style>
