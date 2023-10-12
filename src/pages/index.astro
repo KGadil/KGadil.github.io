@@ -1,4 +1,5 @@
 ---
+import Layout from '../layouts/Layout.astro'
 import '../styles/global.css'
 ---
 
@@ -6,34 +7,40 @@ import '../styles/global.css'
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600&display=swap" rel="stylesheet" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>i'm here</title>
     </head>
 
-    <body>
-        <div class="container">
-            <main id="block" class="block main">
-                <span class="title">adil satiev</span>
-                <a class="mail" href="mailto:adil@satiev.ru">mail me</a>
-                <a class="projects" href="/projects"> my projects</a>
-                <a class="telegram" href="http://t.me/theabsolutemadman">telegram</a>
-                <a class="inst" href="http://instagram/65i116">inst</a>
-                <div class="cv_wrapper">
-                    <a class="cv" href="#">cv</a>
-                    <div class="arrow">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+    <Layout>
+        <main id="block" class="block main">
+            <span class="title">adil satiev</span>
+            <a class="mail" href="mailto:adil@satiev.ru">mail me</a>
+            <a class="projects" href="/projects"> my projects</a>
+            <a class="telegram" href="http://t.me/theabsolutemadman">telegram</a>
+            <a class="inst" href="http://instagram/65i116">inst</a>
+            <div class="cv_wrapper">
+                <a class="cv" href="#">cv</a>
+                <div class="arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-            </main>
-        </div>
-    </body>
+            </div>
+        </main>
+    </Layout>
 
-    <style>
+    <style style="scss">
+        a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            margin: 10px 0;
+        }
+        a {
+            box-sizing: border-box;
+            font-family: 'Abril Fatface', cursive;
+        }
+
         .main {
             display: flex;
             align-items: center;
@@ -44,19 +51,19 @@ import '../styles/global.css'
             font-size: 3.5rem;
             box-shadow: 0px 0px 46px 22px rgba(216, 230, 241, 0.2);
             padding: 2rem 2rem;
-
+            text-align: center;
             margin: 1rem;
-        }
-        .title {
-            font-size: 1.5rem;
-            font-family: 'Urbanist';
-            font-weight: 600;
-        }
-        .cv_wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
+            .title {
+                font-size: 1.5rem;
+                font-family: 'Urbanist';
+                font-weight: 600;
+            }
+            .cv_wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
         }
 
         .arrow {
@@ -93,26 +100,6 @@ import '../styles/global.css'
                 opacity: 0;
                 transform: rotate(45deg) translate(0px, 0px);
             }
-        }
-
-        a {
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            margin: 10px 0;
-        }
-        a {
-            box-sizing: border-box;
-            font-family: 'Abril Fatface', cursive;
-        }
-
-        a::selection {
-            background: rgb(46, 1, 65);
-            color: rgb(237, 237, 237);
-        }
-
-        span::selection {
-            background: rgb(38, 4, 53);
-            color: rgb(237, 237, 237);
         }
     </style>
 </html>
